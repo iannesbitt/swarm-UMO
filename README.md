@@ -16,7 +16,7 @@ Current parent SWARM version: [2.8.7](https://github.com/usgs/swarm/releases/tag
 
 4. Reboot and ensure the kiosk begins at startup. Press the F11 key to exit fullscreen kiosk mode.
 
-#### optional but recommended:
+### optional but recommended:
 
 5. Type `nano ~/.bash_aliases` and add the following line:
 ```bash
