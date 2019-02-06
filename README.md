@@ -14,7 +14,7 @@ Current parent SWARM version: [2.8.7](https://github.com/usgs/swarm/releases/tag
 ```
  When you're done, press CTRL+O, Enter, and CTRL+X to save and exit the nano editor.
 
-4. Reboot and ensure the kiosk begins at startup. Press the F11 key to exit fullscreen kiosk mode.
+4. Reboot and ensure the kiosk begins at startup. Press the F11 key to exit or enter fullscreen kiosk mode.
 
 ### optional but recommended:
 
