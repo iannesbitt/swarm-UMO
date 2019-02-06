@@ -6,25 +6,27 @@ Current parent SWARM version: [2.8.7](https://github.com/usgs/swarm/releases/tag
 # installation
 *meant for Ubuntu/Kubuntu/Xubuntu but likely applicable to many UNIX OSs*
 
-1. Download this repository using `git clone https://github.com/iannesbitt/swarm-UMO.git` or by using the download button on this page.
-2. Unzip to `~/swarm-UMO`
-3. Edit your crontab (enter `crontab -e` at a terminal window) and add the following line:
+**1. Download this repository** using `git clone https://github.com/iannesbitt/swarm-UMO.git` or by using the download button on this page.
+
+**2. Unzip** to `~/swarm-UMO`
+
+**3. Edit your crontab** (enter `crontab -e` at a terminal window) and add the following line:
 ```bash
 @reboot bash ~/swarm-UMO/swarm.sh "--kiosk=ORNO ew;ORNO HHZ NE 00" "--saveConfig=false" "--timeChunk=30"
 ```
  When you're done, press CTRL+O, Enter, and CTRL+X to save and exit the nano editor.
 
-4. Reboot and ensure the kiosk begins at startup. Press the F11 key to exit or enter fullscreen kiosk mode.
+**4. Reboot** and ensure the kiosk begins at startup. Press the F11 key to exit or enter fullscreen kiosk mode.
 
 ### optional but recommended:
 
-5. Type `nano ~/.bash_aliases` and add the following line:
+**5. Add an alias** (type `nano ~/.bash_aliases` and add the following line):
 ```bash
 alias swarmkiosk='bash ~/swarm-UMO/swarm.sh "--kiosk=ORNO ew;ORNO HHZ NE 00" "--saveConfig=false" "--timeChunk=30" &'
 ```
  Again, press CTRL+O, Enter, and CTRL+X to save and exit.
 
-6. Type `bash` or restart your terminal window, and now you will be able to use the alias command `swarmkiosk` to start SWARM in kiosk mode without restarting.
+**6. Type `bash` or restart your terminal window**, and now you will be able to use the alias command `swarmkiosk` to start SWARM in kiosk mode without restarting.
 
 
  about swarm
