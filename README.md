@@ -30,15 +30,13 @@ alias swarmkiosk='bash ~/swarm-UMO/swarm.sh "--kiosk=ORNO ew;ORNO HHZ NE 00" "--
 
 
 # troubleshooting
-Enter the program directory using `cd ~/swarm-UMO`.
-
-Enter the `tree` command (should be pretty common on unix machines, but if you don't have it it's likely easy to get with `sudo apt-get install tree`, `sudo pacman -S tree`, or `brew install tree` depending on your OS.
+Use the `tree` command to examine the directory structure. `tree` should be pretty common on unix machines, but if you don't have it it's likely easy to get with `sudo apt-get install tree`, `sudo pacman -S tree`, or `brew install tree` depending on your OS.
 
 The point of `tree` is to figure out whether your unzip worked correctly. The meat of SWARM should reside in `~/swarm-UMO` for things to work properly. If instead things unzip to `~/swarm-UMO/swarm-UMO`, or for whatever reason things get moved around, the commands described above won't be able to find their targets.
 
 Your output should look like the following:
 ```
-$ tree
+$ tree ~/swarm-UMO
 .
 ├── CHANGES.md
 ├── clip.wav
@@ -109,7 +107,7 @@ You shouldn't have problems with errors in Java itself, but it does need to be i
 Please [open a new github issue](https://github.com/iannesbitt/swarm-UMO/issues/new) describing the problem, the OS, and the output of the following commands:
 
 ```bash
-cd ~/swarm-UMO; tree
+tree ~/swarm-UMO
 bash ~/swarm-UMO/swarm.sh
 ```
 
