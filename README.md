@@ -29,6 +29,91 @@ alias swarmkiosk='bash ~/swarm-UMO/swarm.sh "--kiosk=ORNO ew;ORNO HHZ NE 00" "--
 **6. Type `bash` or restart your terminal window**, and now you will be able to use the alias command `swarmkiosk` to start SWARM in kiosk mode without restarting.
 
 
+# troubleshooting
+Enter the program directory using `cd ~/swarm-UMO`.
+
+Enter the `tree` command (should be pretty common on unix machines, but if you don't have it it's likely easy to get with `sudo apt-get install tree`, `sudo pacman -S tree`, or `brew install tree` depending on your OS.
+
+The point of `tree` is to figure out whether your unzip worked correctly. The meat of SWARM should reside in `~/swarm-UMO` for things to work properly. If instead things unzip to `~/swarm-UMO/swarm-UMO`, or for whatever reason things get moved around, the commands described above won't be able to find their targets.
+
+Your output should look like the following:
+```
+$ tree
+.
+├── CHANGES.md
+├── clip.wav
+├── DefaultVelocityModel.txt
+├── ding.wav
+├── docs
+│   ├── hypo71manual.pdf
+│   └── swarm_v2.pdf
+├── EventClassifications.config
+├── Hypo71.config
+├── layouts
+│   └── ORNO.config
+├── lib
+│   └── swarm.jar
+├── LICENSE.md
+├── mapdata
+│   ├── augustine
+│   │   ├── augustine_10m.png
+│   │   └── MapPack.txt
+│   ├── nasa_240m_A1
+│   │   ├── MapPack.txt
+│   │   └── nasa_240m_A1_F_07.jpg
+│   ├── nasa_240m_D2
+│   │   ├── MapPack.txt
+│   │   ├── nasa_240m_D2_D_10.jpg
+│   │   ├── nasa_240m_D2_E_09.jpg
+│   │   ├── nasa_240m_D2_E_10.jpg
+│   │   └── nasa_240m_D2_F_09.jpg
+│   ├── nasa_2k
+│   │   ├── MapPack.txt
+│   │   ├── nasa_2k_B_01.jpg
+│   │   ├── nasa_2k_B_02.jpg
+│   │   ├── nasa_2k_B_10.jpg
+│   │   ├── nasa_2k_C_01.jpg
+│   │   ├── nasa_2k_C_02.jpg
+│   │   ├── nasa_2k_C_10.jpg
+│   │   ├── nasa_2k_G_10.jpg
+│   │   └── nasa_2k_H_10.jpg
+│   └── world
+│       ├── Labels.txt
+│       ├── MapPack.txt
+│       ├── world_A1.jpg
+│       ├── world_A2.jpg
+│       ├── world_A3.jpg
+│       ├── world_A4.jpg
+│       ├── world_B1.jpg
+│       ├── world_B2.jpg
+│       ├── world_B3.jpg
+│       ├── world_B4.jpg
+│       └── world.jpg
+├── NTP.config
+├── README.md
+├── Swarm.config
+├── Swarm.config.bak
+├── swarm_console.bat
+├── swarm.sh
+└── WaveDefaults.config
+
+9 directories, 47 files
+```
+
+## java
+
+You shouldn't have problems with errors in Java itself, but it does need to be installed if it's not already. It's likely already installed on many OS environments (you can check by trying `java -version` at a command prompt). If it's not, follow instructions for your OS to install it (graphical installer for Mac, `sudo apt install default-jdk` for Ubuntu, `pacman -S jre-openjdk` for Arch.
+
+## other issues?
+
+Please [open a new github issue](https://github.com/iannesbitt/swarm-UMO/issues/new) describing the problem, the OS, and the output of the following commands:
+
+```bash
+cd ~/swarm-UMO; tree
+bash ~/swarm-UMO/swarm.sh
+```
+
+
  about swarm
 ==========================
 
