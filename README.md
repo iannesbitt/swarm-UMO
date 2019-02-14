@@ -20,7 +20,7 @@ Current parent SWARM version: [2.8.7](https://github.com/usgs/swarm/releases/tag
 
 ### optional but recommended:
 
-**5. Add an alias** (type `nano ~/.bash_aliases` and add the following line):
+**5. Add aliases** (type `nano ~/.bash_aliases` and add the following lines):
 ```bash
 alias swarm='cd ~/swarm-UMO; bash ~/swarm-UMO/swarm.sh'
 alias swarmkiosk='cd ~/swarm-UMO; bash ~/swarm-UMO/swarm.sh "--kiosk=ORNO ew;ORNO HHZ NE 00" "--saveConfig=false" "--timeChunk=30" &'
